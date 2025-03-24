@@ -1,0 +1,117 @@
+:root {
+  --border: 2px solid hotpink;
+  --header-gradient: linear-gradient(to bottom, #6c92b5, #6183a4);
+  --header-logo-font: 32px;
+  --header-link-font-size: 18px;
+  --header-font-color: white;
+  --header-link-animation-color: brown;
+}
+
+/* General Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header Alignment */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: var(--header-gradient);
+  color: var(--header-font-color);
+}
+
+.header-logo {
+  font-size: var(--header-logo-font);
+}
+
+.header-logo span {
+  color: var(--header-link-animation-color);
+}
+
+.header-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+  font-size: 32px;
+  display: none;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .header-links {
+    background: var(--header-gradient);
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    text-align: center;
+    padding: 10px 0;
+    /* border: var(--border); */
+    width: 100vw;
+  }
+  .header-links.active {
+    display: flex;
+    animation: expand 500ms ease-in-out;
+    transform-origin: top;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .header-links li::after {
+    display: none;
+  }
+}
+
+/* Animationg the header Links */
+
+.header-links li {
+  /* needed for absolute positioning of underlining */
+  position: relative;
+  display: inline-block;
+}
+
+.header-links li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 0%;
+  height: 4px;
+  background-color: var(--header-link-animation-color);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.header-links li:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleY(0);
+  }
+
+  70% {
+    transform: scaleY(1.1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
