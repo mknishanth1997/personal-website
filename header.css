@@ -1,5 +1,7 @@
 :root {
-  --border: 2px solid hotpink;
+  --border: 10px double hotpink;
+  --border1: 2px solid red;
+  --border2: 2px solid yellow;
   --header-gradient: linear-gradient(to bottom, #6c92b5, #6183a4);
   --header-logo-font: 32px;
   --header-link-font-size: 18px;
@@ -23,6 +25,13 @@ header {
   padding: 15px 20px;
   background: var(--header-gradient);
   color: var(--header-font-color);
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  position: relative;
+  width: 100%;
+  /* isolation: isolate; */
+  /* z-index: 1000; */
 }
 
 .header-logo {
@@ -51,6 +60,10 @@ header {
 /* Responsive Design */
 
 @media (max-width: 768px) {
+  header {
+    isolation: isolate;
+    z-index: 10000;
+  }
   .header-links {
     background: var(--header-gradient);
     cursor: pointer;

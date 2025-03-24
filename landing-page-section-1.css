@@ -1,0 +1,158 @@
+/* Root */
+:root {
+  --landing-page-section-bgcolor: linear-gradient(to bottom, #5a89b2, #4f7a9e);
+}
+
+.landing-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px 0px 100px;
+  gap: 20px;
+  background: var(--landing-page-section-bgcolor);
+}
+
+img {
+  max-width: 100%;
+  height: max-content;
+  /* border: var(--border1); */
+  display: inline-block;
+  object-fit: contain;
+  position: relative;
+  flex: 1;
+}
+
+.landing-page-left-container {
+  /* border: var(--border1); */
+  flex: 1;
+  max-width: 50%;
+}
+
+.landing-page-right-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: var(--border1); */
+  min-width: 300px;
+  max-width: 50%;
+}
+
+.landing-page-left-container > h1:nth-child(1) {
+  font-size: clamp(30px, 5vw, 55px);
+  text-shadow: -2px -2px 0 rgba(255, 255, 255, 0.5),
+    2px 2px 0 rgba(0, 0, 0, 0.7);
+}
+.landing-page-left-container > h1:nth-child(1) > span {
+  opacity: 50%;
+}
+.landing-page-left-container > h1:nth-child(2) {
+  font-size: clamp(50px, 10vw, 110px);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+.landing-page-left-container > h1:nth-child(3) {
+  padding-bottom: 20px;
+  color: var(--header-link-animation-color);
+  text-shadow: 2px 2px 4px black;
+  font-size: clamp(20px, 4vw, 40px);
+}
+
+.landing-page-left-container > p {
+  font-size: 24px;
+  padding-bottom: 50px;
+  line-height: 2rem;
+}
+
+.downloadResumeButton {
+  position: relative;
+  padding: 30px 90px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.5em;
+  border: 2px solid transparent;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  background-color: transparent;
+}
+
+.downloadResumeButton:hover {
+  border: 2px solid #fff;
+}
+
+.downloadResumeButton::before {
+  content: '';
+  position: absolute;
+  inset: 0 8px;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.downloadResumeButton::after {
+  content: '';
+  position: absolute;
+  inset: 8px 0;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.downloadResumeButton:hover::before {
+  inset: 0px -12px;
+  transform: skewY(15deg);
+  -webkit-transform: skewY(15deg);
+  -moz-transform: skewY(15deg);
+  -ms-transform: skewY(15deg);
+  -o-transform: skewY(15deg);
+}
+
+.downloadResumeButton:hover::after {
+  inset: -12px 0px;
+  transform: skewX(15deg);
+  -webkit-transform: skewX(15deg);
+  -moz-transform: skewX(15deg);
+  -ms-transform: skewX(15deg);
+  -o-transform: skewX(15deg);
+}
+
+@media (max-width: 768px) {
+  .landing-page-container {
+    flex-direction: column; /* Stack image and text */
+    align-items: center;
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .landing-page-left-container,
+  .landing-page-right-container {
+    max-width: 90%; /* Let them take full width */
+    flex: none; /* Remove flex-basis so they take natural height */
+  }
+
+  .landing-page-right-container {
+    order: -1; /* Move the image to the top */
+  }
+
+  .landing-page-left-container h1:nth-child(2) {
+    font-size: clamp(40px, 8vw, 80px); /* Scale text */
+  }
+
+  .downloadResumeButton {
+    padding: 20px 60px; /* Reduce button size */
+    font-size: 1.2em;
+  }
+}
