@@ -1,22 +1,27 @@
 /* Root */
 :root {
-  --landing-page-section-bgcolor: linear-gradient(to bottom, #5a89b2, #4f7a9e);
+  /* --landing-page-section-bgcolor: linear-gradient(to bottom, #5a89b2, #4f7a9e); */
+  --landing-page-section-bgcolor: linear-gradient(to right, #2c3e50, #4b6584);
+  /* --landing-page-section-bgcolor: linear-gradient(to right, #1e3c72, #2a5298); */
+  /* --landing-page-section-bgcolor: linear-gradient(to bottom, #3a6186, #89253e); */
 }
 
 .landing-page-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 100px 0px 100px;
+  padding: 50px 10% 0px 10%;
   gap: 20px;
   background: var(--landing-page-section-bgcolor);
+  position: relative;
+  overflow: hidden;
 }
 
 img {
   max-width: 100%;
-  height: max-content;
+  height: auto;
   /* border: var(--border1); */
-  display: inline-block;
+  display: block;
   object-fit: contain;
   position: relative;
   flex: 1;
@@ -25,14 +30,16 @@ img {
 .landing-page-left-container {
   /* border: var(--border1); */
   flex: 1;
+  /* Keeps equal width for left container */
   max-width: 50%;
+  padding-right: 20px;
 }
 
 .landing-page-right-container {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   /* border: var(--border1); */
   min-width: 300px;
   max-width: 50%;
@@ -141,6 +148,9 @@ img {
   .landing-page-right-container {
     max-width: 90%; /* Let them take full width */
     flex: none; /* Remove flex-basis so they take natural height */
+  }
+  .landing-page-left-container {
+    text-align: center;
   }
 
   .landing-page-right-container {

@@ -89,6 +89,10 @@ header {
   .header-links li::after {
     display: none;
   }
+  .main-container {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 /* Animationg the header Links */
