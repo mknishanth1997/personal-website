@@ -104,6 +104,9 @@ header {
     padding: 10px 0;
     /* border: var(--border); */
     width: 100vw;
+    animation: none !important;
+    opacity: 1 !important; /* Ensures visibility */
+    transform: translateX(0) !important; /* Reset movement */
   }
   .header-links.active {
     display: flex;
