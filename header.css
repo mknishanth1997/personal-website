@@ -3,10 +3,12 @@
   --border1: 2px solid red;
   --border2: 2px solid yellow;
   --header-gradient: linear-gradient(to bottom, #6c92b5, #6183a4);
+  --header-gradient: linear-gradient(to right, #1e293b, #475569);
   --header-logo-font: 32px;
   --header-link-font-size: 18px;
   --header-font-color: white;
-  --header-link-animation-color: brown;
+  --header-link-animation-color: yellow;
+  --header-webdev-accent-font: yellow;
 }
 
 /* General Styling */
@@ -36,6 +38,19 @@ header {
 
 .header-logo {
   font-size: var(--header-logo-font);
+  font-family: 'Poppins', sans-serif;
+  opacity: 0; /* Start hidden */
+  animation: slideInLeft 1s ease-out forwards;
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .header-logo span {
@@ -47,7 +62,20 @@ header {
   display: flex;
   gap: 15px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  opacity: 0; /* Start hidden */
+  animation: slideInRight 1s ease-out forwards;
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Hamburger Menu (Hidden by Default) */
