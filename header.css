@@ -9,6 +9,9 @@
   --header-font-color: white;
   --header-link-animation-color: yellow;
   --header-webdev-accent-font: yellow;
+  --font1: 'Poppins', sans-serif;
+  --font2: 'Inter', sans-serif;
+  --font3: 'Bebas Neue', 'Bungee Shade';
 }
 
 /* General Styling */

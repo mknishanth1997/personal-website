@@ -16,11 +16,12 @@
   -webkit-align-items: center;
   height: 560px;
   overflow: hidden;
-  position: absolute;
+  /* position: absolute; */
   /* z-index: 0; */
-  transform: scale(1.5);
+  transform: scale(0.7);
   bottom: 5%;
   right: 15%;
+  border: solid;
 }
 .main {
   margin: 0px auto;
@@ -42,7 +43,7 @@
   -webkit-justify-content: center;
   animation: Rotate 20s linear infinite;
   -webkit-animation: Rotate 20s linear infinite;
-  border: 4px double rgba(0, 150, 255, 0.5);
+  border: 4px double white;
   /* filter: blur(1px); */
   /* border: none; */
 }
@@ -111,7 +112,7 @@
   height: 75%;
   /* border: 3px solid #6495f2; */
   border-radius: 50%;
-  border: 4px double rgba(255, 100, 255, 0.6);
+  border: 4px double white;
   /* border: none; */
 }
 .circle .icon-block img {
@@ -228,4 +229,68 @@
 
 .icon-block8 {
   background-color: #61dafb;
+}
+.sty-grid-cell7 {
+  background-color: #698dcb; /* Your grid color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.main-container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px; /* Space between animation and text */
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.big-circle,
+.circle {
+  animation: Rotate 15s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.icon-block {
+  width: 50px;
+  height: 50px;
+}
+
+.center-logo img {
+  max-width: 120px;
+}
+
+.sty-grid-cell7 h1 {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Fix layout breaking on smaller screens */
+@media (max-width: 768px) {
+  .main-container {
+    width: 300px;
+    height: 300px;
+  }
+  .sty-grid-cell7 h1 {
+    font-size: 18px;
+  }
 }

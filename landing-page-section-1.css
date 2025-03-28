@@ -37,7 +37,7 @@
   /* z-index: 55; */
 }
 
-img {
+.personal {
   max-width: 100%;
   height: auto;
   /* border: var(--border1); */
