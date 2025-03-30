@@ -1,0 +1,157 @@
+.infoc {
+  width: 400px;
+  height: 500px;
+  border-radius: 12px;
+  overflow: auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.infoc:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.infoc .card-header {
+  height: 80px;
+  background: var(--grid-color1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.card-content {
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+  /* overflow: auto; */
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  color: #333;
+  position: relative; /* Needed for absolute positioning of ::after */
+  display: inline-block; /* Ensures width fits content */
+}
+
+.card-content h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Adjusts space below the text */
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: #333; /* Color of the underline */
+}
+
+.card-content ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.card-content ul li {
+  position: relative;
+  font-size: 1.2rem;
+  color: #555;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-family: var(--font1);
+}
+
+.card-content ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--grid-color1);
+  font-size: 1.2rem;
+}
+
+/* card 2 */
+
+.infoc2 .card-header {
+  background-color: var(--grid-color2);
+}
+
+.infoc2 .card-content ul li::before {
+  color: var(--grid-color2);
+}
+
+.info-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Card 3 */
+.infoc3 .card-header {
+  background-color: var(--grid-color3);
+}
+
+.infoc3 .card-content ul li::before {
+  color: var(--grid-color3);
+}
+
+/* Card 4 */
+.infoc4 .card-header {
+  background-color: var(--grid-color4);
+}
+
+.infoc4 .card-content ul li::before {
+  color: var(--grid-color4);
+}
+
+/* Card 5 */
+.infoc5 .card-header {
+  background-color: var(--grid-color5);
+}
+
+.infoc5 .card-content ul li::before {
+  color: var(--grid-color5);
+}
+
+/* Card 6 */
+.infoc6 .card-header {
+  background-color: var(--grid-color6);
+}
+
+.infoc6.card-content ul li::before {
+  color: var(--grid-color6);
+}
+.info-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 30px 100px;
+}
+
+.skill-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  position: relative;
+}
+.skill-section-container > h1 {
+  font-family: var(--font2);
+  font-size: 3rem;
+}
+
+.sidestyle {
+  position: absolute;
+  right: 0;
+  writing-mode: sideways-lr;
+  opacity: 0.5;
+  font-family: var(--font3);
+}

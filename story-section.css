@@ -18,11 +18,10 @@
 }
 .story-container {
   box-sizing: border-box;
-  height: 100vh;
-  /* border: solid; */
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
-  /* gap: 8px; */
+  margin-bottom: 2rem;
+  min-height: 100vh;
 }
 
 .sty-grid-cell1 {

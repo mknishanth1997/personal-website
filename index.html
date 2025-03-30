@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <!-- Css Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,6 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Shade&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monoton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Shade&family=Gochi+Hand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monoton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -17,8 +28,12 @@
     <link rel="stylesheet" href="landing-page-section-1.css" />
     <link rel="stylesheet" href="header-section1-animation.css" />
     <link rel="stylesheet" href="story-section.css" />
+    <link rel="stylesheet" href="cardsection.css" />
+    <link rel="stylesheet" href="board.css" />
+    <link rel="stylesheet" href="poseleent.css" />
     <script src="header.js" defer></script>
     <script src="landing-page-section-1.js" defer></script>
+    <script src="flexbox.js" defer></script>
   </head>
   <body>
     <!-- Header Start-->
@@ -272,6 +287,326 @@
           </div>
         </div>
       </section>
+
+      <!-- card section -->
+      <div class="skill-section-container">
+        <h1>My Skills</h1>
+        <h1 class="sidestyle">Tools and Technologies</h1>
+        <!-- Card 1 -->
+        <div class="info-card-container">
+          <!-- Card 1 -->
+          <div class="infoc infoc1">
+            <div class="card-header">
+              <img src="animation-landing-page-icon5.png" alt="HTML5 Icon" />
+            </div>
+            <div class="card-content">
+              <h3>HTML5</h3>
+              <ul>
+                <li>Semantic HTML</li>
+                <li>Forms & Validations</li>
+                <li>Tables & Data Presentation</li>
+                <li>Web Accessibility (WCAG, WAI-ARIA)</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Info card 2 -->
+          <div class="infoc infoc2">
+            <div class="card-header">
+              <img src="animation-landing-page-icon2.png" alt="HTML5 Icon" />
+            </div>
+            <div class="card-content">
+              <h3>CSS3</h3>
+              <ul>
+                <li>Normal Document Flow</li>
+                <li>CSS Layout Algorithms</li>
+                <li>Box Model</li>
+                <li>Flexbox & Grid</li>
+                <li>Positioned Layout</li>
+                <li>CSS Functions (calc, var, etc.)</li>
+                <li>Animations & Transitions</li>
+                <li>Browser Compatibility</li>
+                <li>CSS Frameworks (Bootstrap, Tailwind)</li>
+                <li>Preprocessors (Sass, LESS)</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Info Card 3 -->
+          <div class="infoc infoc3">
+            <div class="card-header">
+              <img src="jsicon.png" alt="" />
+            </div>
+            <div class="card-content">
+              <h3>JS</h3>
+              <ul>
+                <li>Execution Context & Call Stack</li>
+                <li>Hoisting & Temporal Dead Zone</li>
+                <li>Data Types (Primitive & Reference)</li>
+                <li>
+                  Type Coercion & Type Checking (typeof, instanceof,
+                  Object.prototype.toString)
+                </li>
+                <li>
+                  Arrays & Their Methods (map, filter, reduce, find, forEach,
+                  etc.)
+                </li>
+                <li>Functions (Declaration, Expression, Arrow Functions)</li>
+                <li>Function Scope & Lexical Scope</li>
+                <li>Closures & Higher-Order Functions</li>
+                <li>Currying & Partial Application</li>
+                <li>
+                  Objects & Prototypes (Prototype Chain, Object.create,
+                  Inheritance)
+                </li>
+                <li>Constructors & Factory Functions</li>
+                <li>
+                  Classes & OOP Principles (Encapsulation, Polymorphism,
+                  Composition)
+                </li>
+                <li>
+                  ES6+ Features (let/const, spread/rest, destructuring, optional
+                  chaining, etc.)
+                </li>
+                <li>ES6 Modules (import/export)</li>
+                <li>Recursion & Tail Call Optimization</li>
+                <li>
+                  Event Loop & Microtasks (Call Stack, Task Queue, Web APIs)
+                </li>
+                <li>
+                  Asynchronous JavaScript (Callbacks, Promises, Async/Await)
+                </li>
+                <li>
+                  Error Handling (try/catch, finally, Error Object, Custom
+                  Errors)
+                </li>
+                <li>Event Delegation & Bubbling</li>
+                <li>
+                  Web APIs (Fetch API, LocalStorage, SessionStorage, IndexedDB)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Info Card 4 -->
+
+          <div class="infoc infoc4">
+            <div class="card-header">
+              <img src="animation-landing-page-icon8.png" alt="" />
+            </div>
+            <div class="card-content">
+              <h3>Coding Skills</h3>
+              <ul>
+                <li>C</li>
+                <li>Html/Css/Js</li>
+                <li>React js</li>
+                <li>Node js</li>
+                <li>Sql</li>
+                <li>Pyton</li>
+                <li>React Native</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Info Card 5 -->
+          <div class="infoc infoc5">
+            <div class="card-header">
+              <img src="animation-landing-page-icon3.png" alt="" />
+            </div>
+            <div class="card-content">
+              <h3>Tools and Technologies</h3>
+              <ul>
+                <li>Figma (UI/UX Design)</li>
+                <li>Git & GitHub (Version Control)</li>
+                <li>Adobe Photoshop (Graphic Editing)</li>
+                <li>Visual Studio Code (VS Code)</li>
+                <li>ESLint & Prettier (Code Linting & Formatting)</li>
+                <li>NPM, Yarn & Bundlers (Webpack, Vite, Parcel, Rollup)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Info Card 6 -->
+          <div class="infoc infoc6">
+            <div class="card-header">
+              <img src="animation-landing-page-icon6.png" alt="" />
+            </div>
+            <div class="card-content">
+              <h3>Other Skills</h3>
+              <ul>
+                <li>Linux & Windows Operating Systems</li>
+                <li>Command Line Interface (CLI) Proficiency</li>
+                <li>Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+                <li>Strong Documentation Skills</li>
+                <li>Typing Proficiency: 70 WPM</li>
+                <li>Effective Communication Skills</li>
+                <li>Work Environment Setup & Configuration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- White Board Section -->
+      <div class="tut-time">
+        <h1>Sneak Peak</h1>
+        <div class="board">
+          <div class="flex-exp">
+            <h3>Flexbox</h3>
+            <div class="flex-parent">
+              <div class="child1">Child-1</div>
+              <div class="child2">Child-2</div>
+              <div class="child3">Child-3</div>
+            </div>
+            <div class="flex-box-controls">
+              <div class="flex-display-control">
+                <label for="flex-disp">Display:</label>
+                <select name="flex-disp" id="flex-disp">
+                  <option value="block" selected>Block</option>
+                  <option value="flex">Flex</option>
+                </select>
+              </div>
+              <div class="flex-direction-control">
+                <label for="flex-dire">Direction:</label>
+                <select name="flex-dire" id="flex-dire">
+                  <option value="row" selected>row</option>
+                  <option value="column">column</option>
+                </select>
+              </div>
+              <div class="flex-h-align">
+                <label for="flex-jus">Justify-content:</label>
+                <select name="flex-jus" id="flex-jus">
+                  <option value="flex-start" selected>Flex Start</option>
+                  <option value="center">Center</option>
+                  <option value="space-between">Space Between</option>
+                  <option value="space-around">Space Around</option>
+                  <option value="space-evenly">Space Evenly</option>
+                  <option value="flex-end">Flex End</option>
+                </select>
+              </div>
+              <div class="flex-v-align">
+                <label for="flex-align">Align-items:</label>
+                <select name="flex-align" id="flex-align">
+                  <option value="flex-start">Flex Start</option>
+                  <option value="center">Center</option>
+                  <option value="flex-end">Flex End</option>
+                  <option value="stretch" selected>Stretch</option>
+                  <option value="baseline">Baseline</option>
+                </select>
+              </div>
+              <div class="flex-3-prop">
+                <label for="f3pop">Flex:</label>
+                <select name="f3pop" id="f3pop">
+                  <option value="0" selected>0</option>
+                  <option value="1">1</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <h1 class="grid-heading">Holy Grail Layout using Grid</h1>
+          <div class="grid-holy-grail-layout">
+            <div class="grid-box">
+              <div>Header</div>
+              <div>Side-bar</div>
+              <div>Main</div>
+              <div>Add</div>
+              <div>Footer</div>
+            </div>
+            <div class="grid-code-snippet">
+              <pre>
+                <code class="language-css">
+                  .parent {
+                    display: grid;
+                    grid-template-areas: 
+                    "header header header"
+                    "side-bar main add"
+                    "footer footer footer";
+                    grid-template-columns: 1fr 3fr 1fr;
+                    grid-template-rows: 1fr 3fr 1fr;
+                }
+                // Grid children
+                
+                .header {
+                    grid-area: header;
+                }
+                .side-bar {
+                    grid-area: side-bar;
+                }
+                .main {
+                    grid-area: main;
+                }
+                .add {
+                    grid-area: add;
+                }
+                .footer {
+                    grid-area: footer;
+                } 
+                
+                </code>
+              </pre>
+              <button class="agcb">Apply Changes</button>
+            </div>
+          </div>
+          <!-- Posittioned layout Element's -->
+          <div class="positioned-elemetns">
+            <h1>Positioned Element</h1>
+            <div class="poscon">
+              <div class="program-displa">
+                <div class="boxes">
+                  <div class="box1 box"></div>
+                  <div class="box2 box"></div>
+                  <div class="box3 box"></div>
+                </div>
+              </div>
+              <div class="explanation"></div>
+              <div class="code-snipped-pos">
+                <div class="static-pos-layot-container">
+                  <div>Static Positioned Layout</div>
+                  <pre>
+                    <code class="language-css">
+                      .ndf {
+                        margin-top: 100px;
+                      }
+                    </code>
+                  </pre>
+                  <button>Apply Changes</button>
+                </div>
+                <div class="relative-pos-layout-container">
+                  <div>Relative Positioned Layout</div>
+                  <pre>
+                    <code class="language-css">
+                      .rpe {
+                        position: relative;
+                        top: 70px;
+                      }
+                    </code>
+                  </pre>
+                  <button>Apply Changes</button>
+                </div>
+                <div class="absolute-pos-layout-container">
+                  <div>Absoltely Positioned Layout</div>
+                  <pre>
+                    <code class="language-css">
+                      .ape {
+                        position: absolute;
+                        top: 0;
+                        right: 20px;
+                      }
+                      
+                      .apeparent {
+                        position: relative;
+                      }
+                      
+                    </code>
+                  </pre>
+                  <button>Apply Changes</button>
+                </div>
+                <div class="fixed-pos-layout-container"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

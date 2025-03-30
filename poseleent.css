@@ -1,0 +1,136 @@
+.poscon {
+  display: grid;
+  grid-template-areas:
+    'program code'
+    'answer code';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 700px 700px;
+}
+
+.program-displa {
+  border: solid;
+  grid-area: program;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.explanation {
+  border: solid;
+  grid-area: answer;
+}
+.code-snipped-pos {
+  border: solid;
+  grid-area: code;
+}
+
+/* pos pink box */
+
+.box {
+  border: solid;
+  width: 100px;
+  height: 100px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.boxes {
+  border: solid;
+  height: 400px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.box1 {
+  border: 6px solid hotpink;
+}
+
+/* normal docment flow */
+
+.ndf {
+  margin-top: 100px;
+}
+
+/* relative */
+
+.rpe {
+  position: relative;
+  top: 70px;
+}
+
+/* Absolute pos */
+
+.ape {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.apeparent {
+  position: relative;
+}
+
+/* Fixed position */
+
+/* code snippet */
+
+.code-snipped-pos {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+.code-snipped-pos > * {
+  border: solid;
+}
+/* spl */
+.static-pos-layot-container {
+  display: flex;
+  gap: 15px;
+}
+.static-pos-layot-container > * {
+}
+.static-pos-layot-container > pre {
+  flex: 2;
+  font-size: 1rem;
+}
+.static-pos-layot-container > div:nth-child(1) {
+  writing-mode: sideways-lr;
+  font-size: 1.5rem;
+  padding: 24px;
+}
+
+/* rpe */
+
+.relative-pos-layout-container {
+  display: flex;
+  gap: 15px;
+}
+.relative-pos-layout-container > * {
+}
+.relative-pos-layout-container > pre {
+  flex: 2;
+  font-size: 1rem;
+}
+.relative-pos-layout-container > div:nth-child(1) {
+  writing-mode: sideways-lr;
+  font-size: 1.5rem;
+  padding: 24px;
+}
+
+/* ape */
+
+.absolute-pos-layout-container {
+  display: flex;
+  gap: 15px;
+}
+.absolute-pos-layout-container > * {
+}
+.absolute-pos-layout-container > pre {
+  flex: 2;
+  font-size: 1rem;
+}
+.absolute-pos-layout-container > div:nth-child(1) {
+  writing-mode: sideways-lr;
+  font-size: 1.5rem;
+  padding: 24px;
+}
