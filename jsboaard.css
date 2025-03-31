@@ -1,0 +1,287 @@
+/* Layout container */
+.js-array-method {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 20px;
+  font-family: var(--font4);
+}
+
+.js-array-method {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 100%;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.js-array-method > div {
+  flex: 1;
+  min-width: 250px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+/* Code Block */
+.js-array-method pre {
+  text-align: left;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  overflow-x: auto;
+  max-height: 120px;
+}
+
+/* Button Styling */
+.js-array-method button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6b81;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 24px;
+  font-family: var(--font4);
+}
+
+.js-array-method button:hover {
+  background-color: #ff4757;
+}
+
+/* Result Display */
+.js-array-method .rd1,
+.js-array-method .rd2,
+.js-array-method .rd3 {
+  margin-top: 10px;
+  padding: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font4);
+}
+
+.js-map,
+.js-filter,
+.js-reduce {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease-in;
+}
+
+.js-map:hover,
+.js-filter:hover,
+.js-reduce:hover {
+  transform: scale(1.05);
+}
+
+.js-map > *,
+.js-filter > *,
+.js-reduce > * {
+  flex: 1;
+  padding: 8px;
+}
+
+.js-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font4);
+  font-size: 1rem;
+  gap: 8px;
+  margin-top: 100px;
+}
+
+.js-map p,
+.js-filter p,
+.js-reduce p {
+  font-size: 2rem;
+}
+
+/* Other card design */
+
+.js-other-concepts {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 100%;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.js-other-concepts > div {
+  flex: 1;
+  min-width: 250px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.js-other-concepts pre {
+  text-align: left;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  overflow-x: auto;
+  max-height: 120px;
+}
+
+.js-other-concepts button {
+  background: hotpink;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  align-self: center;
+}
+
+.js-other-concepts button:hover {
+  background: deeppink;
+}
+#pizzaMenu button {
+  background: #ff9800;
+  margin: 5px;
+  padding: 24px;
+  font-size: 2rem;
+}
+
+.js-other-concepts #moneyDisplay,
+.js-other-concepts #pizzaStatus,
+.js-other-concepts #orderText {
+  margin-top: 10px;
+  padding: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font4);
+}
+
+.closure,
+.jsasyncawait,
+.Event-Delegation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+  font-family: var(--font4);
+}
+
+.closure:hover,
+.jsasyncawait:hover,
+.Event-Delegation:hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: scale(1.05);
+}
+
+.closure > *,
+.jsasyncawait > *,
+.Event-Delegation > * {
+  flex: 1;
+  padding: 8px;
+}
+
+.closure p,
+.jsasyncawait p,
+.Event-Delegation p {
+  font-size: 2rem;
+  font-family: var(--font4);
+}
+
+/* skill box  */
+
+/* Main Container */
+.skills-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.skills-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Small Blue Underline */
+.skills-container .underline {
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 5px auto 15px;
+  border-radius: 2px;
+}
+
+/* Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  max-width: 700px;
+}
+
+/* Each Skill Box */
+.skill-box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Images */
+.skill-box img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Text */
+.skill-box p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.skill-box:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+  transform: translateY(-5px); /* Slight upward movement */
+}

@@ -4,7 +4,7 @@
     'program code'
     'answer code';
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 700px 700px;
+  grid-template-rows: 600px 600px;
 }
 
 .program-displa {
@@ -133,4 +133,172 @@
   writing-mode: sideways-lr;
   font-size: 1.5rem;
   padding: 24px;
+}
+
+/* Initially, hide all position explanations */
+.position-exp {
+  display: none;
+  padding: 20px;
+  border-left: 4px solid #ff6b81;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Only one explanation should be visible at a time */
+.position-exp.active {
+  display: block;
+}
+
+/* Heading styling */
+.position-exp h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff6b81;
+  margin-bottom: 10px;
+}
+.explanation {
+  font-family: var(--font4);
+}
+
+/* Text Styling */
+.position-exp p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Code block styling inside explanation */
+.position-exp code {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.fixed-pos-layout-container {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.fixed-pos-layout-container button {
+  font-size: 4rem;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .poscon {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'program'
+      'answer'
+      'code';
+  }
+}
+@media (max-width: 600px) {
+  .explanation {
+    width: 95%;
+    padding: 15px;
+  }
+  .position-exp h1 {
+    font-size: 1.2rem;
+  }
+  .position-exp p {
+    font-size: 0.9rem;
+  }
+}
+.position-exp {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.position-exp.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.box {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.box:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+/* Targeting buttons inside .code-snipped-pos */
+.code-snipped-pos button {
+  /* display: block; */
+  /* width: 100%; */
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #ff6b81;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for buttons inside .code-snipped-pos */
+.code-snipped-pos button:hover {
+  background-color: #ff3b56; /* Slightly darker shade */
+  transform: translateY(-3px); /* Button lifts when hovered */
+}
+
+/* Focus effect for buttons inside .code-snipped-pos */
+.code-snipped-pos button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 107, 129, 0.7); /* Glow effect */
+}
+
+/* Disabled button style inside .code-snipped-pos */
+.code-snipped-pos button:disabled {
+  background-color: #dcdcdc;
+  cursor: not-allowed;
+  transform: none; /* No hover effect */
+}
+
+/* Responsive button styling (on smaller screens) */
+@media (max-width: 768px) {
+  .code-snipped-pos button {
+    font-size: 0.9rem; /* Slightly smaller text on mobile */
+    padding: 10px; /* Reduced padding for smaller screens */
+  }
+}
+
+.fixed {
+  position: fixed;
+  z-index: 1000;
+}
+
+.positioned-elemetns {
+  margin-top: 100px;
+}
+
+.positioned-elemetns > h1 {
+  text-align: center;
+  padding: 8px;
+  font-family: var(--font4);
+}
+.code-snipped-pos {
+  font-family: var(--font4);
+}
+.code-snipped-pos button {
+  font-family: var(--font4);
+}
+
+.grid-heading {
+  font-family: var(--font4);
+}
+
+.tut-time > h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.tut-time {
+  margin-top: 100px;
 }

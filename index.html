@@ -31,9 +31,11 @@
     <link rel="stylesheet" href="cardsection.css" />
     <link rel="stylesheet" href="board.css" />
     <link rel="stylesheet" href="poseleent.css" />
+    <link rel="stylesheet" href="jsboaard.css">
     <script src="header.js" defer></script>
     <script src="landing-page-section-1.js" defer></script>
     <script src="flexbox.js" defer></script>
+    <script src="jsinteractivedemo.js" defer></script>
   </head>
   <body>
     <!-- Header Start-->
@@ -146,13 +148,13 @@
                 >
               </li>
             </ul>
-            <img src="graduation.png" alt="" />
+            <img src="graduation.png" alt="" loading="lazy" />
           </div>
 
           <!-- 2nd Cell -->
           <div class="sty-grid-cell sty-grid-cell2">
             <h1>LIFE be like: <span>Not on my watch bro</span></h1>
-            <img src="punch.png" alt="" />
+            <img src="punch.png" alt=""loading="lazy" />
           </div>
           <!-- 3rd cell -->
           <div class="sty-grid-cell sty-grid-cell3">
@@ -160,7 +162,8 @@
               Then I Joined Sales & Moved Mountains
               <span>⛰️ (not literally)</span>
             </h1>
-            <img src="sales.png" alt="Sales Success" />
+            <!-- <img src="sales.png" alt="Sales Success" /> -->
+             <img src="sales (1).png" alt="" loading="lazy">
           </div>
           <div class="sty-grid-cell sty-grid-cell4">
             <ul>
@@ -201,7 +204,7 @@
                 Manager: "Of course! Like their sweatshop workers in China. 😏"
               </h1>
             </div>
-            <img src="website.png" alt="Website negotiation meme" />
+            <img src="website (1).png" alt="Website negotiation meme"loading="lazy" />
           </div>
           <div class="sty-grid-cell sty-grid-cell6">
             <h1>My First Program:</h1>
@@ -249,7 +252,7 @@
           </div>
 
           <div class="sty-grid-cell sty-grid-cell8">
-            <img src="frustrated.png" alt="Frustrated person" />
+            <img src="frustrated.png" alt="Frustrated person" loading="lazy" />
             <p>
               Burned my midnight oil, forced myself through frustration,
               practiced it, went back to the drawing board when it went
@@ -258,7 +261,7 @@
           </div>
 
           <div class="sty-grid-cell sty-grid-cell9">
-            <img src="uxui.png" alt="UX/UI Design" />
+            <img src="uxui (1).png" alt="UX/UI Design" loading="lazy" />
             <p>
               Studying user-centric design and case studies taught me the most
               important lesson— **I am not the target user.**
@@ -268,12 +271,12 @@
           <div class="sty-grid-cell sty-grid-cell10">
             <h1>Still don't trust me?</h1>
             <p class="quote">Ask my Mom.</p>
-            <img src="indianwoman.png" alt="Proud Indian Mom" />
+            <img src="indianwoman (2).png" loading="lazy" alt="Proud Indian Mom" />
             <p class="quote">"My son is the best programmer in the world!"</p>
           </div>
           <div class="sty-grid-cell sty-grid-cell11">
             <h1>Ask my Dad too...</h1>
-            <img src="indianman.png" alt="Disappointed Indian Dad" />
+            <img src="indianman (2).png" alt="Disappointed Indian Dad"  loading="lazy"/>
             <h1 class="dad-quote">"My son is a useless piece of crap!!!"</h1>
           </div>
 
@@ -449,7 +452,7 @@
 
       <!-- White Board Section -->
       <div class="tut-time">
-        <h1>Sneak Peak</h1>
+        <h1>Interactive Sneak Peak</h1>
         <div class="board">
           <div class="flex-exp">
             <h3>Flexbox</h3>
@@ -551,17 +554,78 @@
           <div class="positioned-elemetns">
             <h1>Positioned Element</h1>
             <div class="poscon">
-              <div class="program-displa">
+              <div class="program-displa apeparent">
                 <div class="boxes">
                   <div class="box1 box"></div>
                   <div class="box2 box"></div>
                   <div class="box3 box"></div>
                 </div>
               </div>
-              <div class="explanation"></div>
+              <div class="explanation">
+                <div class="position-exp active static-pos-exp">
+                  <h1>1️⃣ Static Positioning (Default)</h1>
+                  <p>
+                    The element follows the normal document flow, where content
+                    is arranged either as block-level or inline elements—similar
+                    to a word processor for easy readability. Block-level
+                    elements stack on top of each other. Inline elements are
+                    placed next to each other. The flow layout ensures elements
+                    do not overlap and try to maintain their own space without
+                    intruding on others.
+                  </p>
+                </div>
+
+                <div class="position-exp relative-pos-exp">
+                  <h1>2️⃣ Relative Positioning</h1>
+                  <p>
+                    This behaves similarly to static positioning, but with added
+                    flexibility. The element remains in the normal document
+                    flow, but you can move it using top, right, left, and bottom
+                    without affecting other elements' positions. It does not
+                    occupy extra space—when it overlaps with another element, it
+                    stacks on top. You can use z-index to control its stacking
+                    order. Additionally, the original space is preserved, and
+                    the element establishes a new coordinate system based on
+                    where it was initially placed in the document flow.
+                  </p>
+                </div>
+
+                <div class="position-exp absolute-pos-exp">
+                  <h1>3️⃣ Absolute Positioning</h1>
+                  <p>
+                    The element is removed from the normal document flow,
+                    meaning no space is reserved for it, and other elements
+                    behave as if it does not exist in the layout. However, it
+                    still appears visually, stacking on top of subsequent
+                    elements. An absolutely positioned element establishes a new
+                    coordinate system relative to its nearest ancestor that has
+                    a position other than static. If a positioned ancestor
+                    exists, the element is positioned relative to it. If no
+                    positioned ancestor is found, it is positioned relative to
+                    the viewport (i.e., the entire page).
+                  </p>
+                </div>
+
+                <div class="position-exp fixed-pos-exp">
+                  <h1>4️⃣ Fixed Positioning</h1>
+                  <p>
+                    When you apply <code>position: fixed;</code> to an element,
+                    it is positioned relative to the viewport, meaning it stays
+                    fixed in place even when the user scrolls the page. The
+                    element is removed from the normal document flow, so it does
+                    not occupy space, and other elements behave as if it does
+                    not exist in the layout. Unlike <code>absolute</code>, which
+                    is relative to a positioned ancestor, a fixed element is
+                    always relative to the viewport. This makes it ideal for
+                    sticky headers, floating buttons, or navigation bars that
+                    need to stay visible at all times.
+                  </p>
+                </div>
+              </div>
+
               <div class="code-snipped-pos">
                 <div class="static-pos-layot-container">
-                  <div>Static Positioned Layout</div>
+                  <div>Static Position</div>
                   <pre>
                     <code class="language-css">
                       .ndf {
@@ -572,7 +636,7 @@
                   <button>Apply Changes</button>
                 </div>
                 <div class="relative-pos-layout-container">
-                  <div>Relative Positioned Layout</div>
+                  <div>Relative Position</div>
                   <pre>
                     <code class="language-css">
                       .rpe {
@@ -584,7 +648,7 @@
                   <button>Apply Changes</button>
                 </div>
                 <div class="absolute-pos-layout-container">
-                  <div>Absoltely Positioned Layout</div>
+                  <div>Absoltely Positioned</div>
                   <pre>
                     <code class="language-css">
                       .ape {
@@ -601,12 +665,187 @@
                   </pre>
                   <button>Apply Changes</button>
                 </div>
-                <div class="fixed-pos-layout-container"></div>
+                <div class="fixed-pos-layout-container">
+                  <button>Fixed Position Element</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+
+          <!--Js Array map filter-->
+
+          <div class="js-heading">
+            <h1>JavaScript</h1>
+            <img src="jsicon.png" alt="" />
+          </div>
+          <div class="js-array-method">
+            <div class="js-map">
+              <h1>Map</h1>
+              <p>Write a Function to that dobule a politician money.</p>
+              <div class="js-map-code-block">
+                <code>
+                  <pre>
+                    const money = [2, 4, 6, 8, 10];
+                    let politician = money.map((peopleMoney) => peopleMoney * 2);
+                    console.log(politician);
+                  </pre>
+                  <button>Map</button>
+                </code>
+              </div>
+              <div>
+                <div class="rd1">Result</div>
+              </div>
+            </div>
+            <div class="js-filter">
+              <h1>Filter</h1>
+              <p>Write a Function to filter out the honest politician.</p>
+              <div class="js-filter-code-block">
+                <code>
+                  <pre>
+                    const politicianName = ['Ramesh', 'Suresh', 'Naresh'];
+                    let HonestPolitician = politicianName.filter((honesty) => {
+                      if (honesty === 'honesty') {
+                        return true;
+                      } else {
+                        return false;
+                      }
+                    });
+                    
+                    console.log(HonestPolitician);
+                  </pre>
+                  <button>Filter</button>
+                </code>
+              </div>
+              <div>
+                <div class="rd2">Result</div>
+              </div>
+            </div>
+            <div class="js-reduce">
+              <h1>Reduce</h1>
+              <p>Write a function on how government collect tax from people</p>
+              <div class="js-reduce-code-block">
+                <code>
+                  <pre>
+                    const peoplesMoney = [1, 2, 3, 4, 5];
+                    const taxableIncome = peoplesMoney.reduce((tax, more) => tax + more, 0);
+                    console.log(taxableIncome);
+                  </pre>
+                  <button>Reduce</button>
+                </code>
+              </div>
+              <div>
+                <div class="rd3">Result</div>
+              </div>
+            </div>
+          </div>
+<!-- jus Other Concept's -->
+          <div class="js-other-concepts">
+            <!-- JS closure Concept's -->
+            <div class="closure">
+              <h1>Js Closure</h1>
+              <p>A function retains access to its parent’s variables even after the parent has finished executing. The variables are not garbage collected; they persist in heap memory.
+              </p>
+              <div class="closure-js-code-block">
+                <code>
+                  <pre>
+                    function inheritance() {
+                      const money = "💰 1000Rs"; // Father's money
+                      return function child() {
+                        return `Child received: ${money}`;
+                      };
+                    }
+                    
+                    const childAccount = inheritance();
+                    console.log(childAccount()); // Output: "Child received: 💰 1000Rs"
+                  </pre>
+                </code>
+                
+              </div>
+              <button id="getMoney">Get Father's Money</button>
+              <div>
+                <p id="moneyDisplay">Father's Money: ❌</p>
+              </div>
+            </div>
+
+            <!-- js Async and Await -->
+            <div class="jsasyncawait">
+              <h1>Async/Await: 🍕 Order Pizza</h1>
+              <p>Async functions allow JavaScript to handle operations without blocking execution. await pauses the function until the promise resolves, making async code look synchronous.
+
+
+              </p>
+              <div class="closure-js-code-block">
+                <code>
+                  <pre>
+                    function orderPizza() {
+                      return new Promise((resolve) => {
+                        setTimeout(() => resolve("🍕 Pizza is Ready!"), 2000);
+                      });
+                    }
+                    
+                    async function getPizza() {
+                      const status = await orderPizza();
+                      console.log(status);
+                    }
+                    
+                    getPizza();
+                    
+                  </pre>
+                </code>
+                
+              </div>
+              <button id="orderPizza">Order Pizza</button>
+              <div>
+                <p id="pizzaStatus">Status: Waiting... ⏳</p>
+              </div>
+            </div>
+
+            <!-- js Event Delegation -->
+            <div class="Event-Delegation">
+              <h1>Event Delegation: 🏷️ Click a Pizza</h1>
+              <p>Instead of adding event listeners to multiple elements, a single parent handles events for dynamically added children, improving performance and efficiency.
+              </p>
+              <div class="closure-js-code-block">
+          
+              </div>
+              <div id="pizzaMenu">
+                <button class="pizza">🍕 Margherita</button>
+                <button class="pizza">🍕 Pepperoni</button>
+                <button class="pizza">🍕 BBQ Chicken</button>
+            </div>
+              <div>
+                <p id="orderText">Your Order: 🍽️</p>
+              </div>
+            </div>
+          </div>
+
+        
       </div>
+
+      <!-- My skills -->
+      <div class="skills-container">
+        <h2>Expert in Software <span class="underline"></span></h2>
+        <div class="skills-grid">
+            <div class="skill-box"><img src="icons/html.png" alt="HTML"><p>HTML</p></div>
+            <div class="skill-box"><img src="icons/css-3.png" alt="CSS"><p>CSS</p></div>
+            <div class="skill-box"><img src="icons/jsicon.png" alt="JavaScript"><p>JavaScript</p></div>
+            <div class="skill-box"><img src="icons/react.png" alt="jQuery"><p>React</p></div>
+            <div class="skill-box"><img src="icons/programing.png" alt="React"><p>Node.js</p></div>
+            <div class="skill-box"><img src="icons/git.png" alt="Node.js"><p>Git</p></div>
+            <div class="skill-box"><img src="icons/github.png" alt="MongoDB"><p>Git Hub</p></div>
+            <div class="skill-box"><img src="icons/terminal.png" alt="SASS"><p>Terminal</p></div>
+            <div class="skill-box"><img src="icons/linux.png" alt="Bootstrap"><p>Linux</p></div>
+            <div class="skill-box"><img src="icons/database-storage.png" alt="Express.js"><p>DataBase</p></div>
+            <div class="skill-box"><img src="icons/visual-studio.png" alt="Photoshop"><p>VS code</p></div>
+            <div class="skill-box"><img src="icons/office.png" alt="GitHub"><p>Office</p></div>
+            <div class="skill-box"><img src="icons/windows.png" alt="WordPress"><p>windows</p></div>
+            <div class="skill-box"><img src="icons/ubuntu.png" alt="WooCommerce"><p>Ubuntu</p></div>
+            <div class="skill-box"><img src="icons/figma.png" alt="Netlify"><p>Figma</p></div>
+            <div class="skill-box"><img src="icons/photoshop.png" alt="Firebase"><p>Firebase</p></div>
+        </div>
+    </div>
     </main>
+
+
   </body>
 </html>
