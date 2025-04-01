@@ -26,6 +26,11 @@
   text-align: center;
 }
 
+.js-heading > h1 {
+  font-family: var(--heading-font);
+  font-weight: var(--bold);
+}
+
 /* Code Block */
 .js-array-method pre {
   text-align: left;
@@ -49,7 +54,7 @@
   cursor: pointer;
   transition: 0.3s;
   font-size: 24px;
-  font-family: var(--font4);
+  font-family: var(--heading-font);
 }
 
 .js-array-method button:hover {
@@ -71,7 +76,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font4);
+  font-family: var(--heading-font);
 }
 
 .js-map,
@@ -99,8 +104,8 @@
 .js-heading {
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-family: var(--font4);
+  align-items: last baseline;
+  /* font-family: var(--font4); */
   font-size: 1rem;
   gap: 8px;
   margin-top: 100px;
@@ -110,6 +115,14 @@
 .js-filter p,
 .js-reduce p {
   font-size: 2rem;
+  font-family: var(--para-font);
+}
+
+.js-map h1,
+.js-filter h1,
+.js-reduce h1 {
+  font-size: 2rem;
+  font-family: var(--heading-font);
 }
 
 /* Other card design */
@@ -182,7 +195,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font4);
+  font-family: var(--para-font);
 }
 
 .closure,
@@ -215,7 +228,7 @@
 .jsasyncawait p,
 .Event-Delegation p {
   font-size: 2rem;
-  font-family: var(--font4);
+  font-family: var(--para-font);
 }
 
 /* skill box  */
@@ -235,9 +248,11 @@
 
 /* Title */
 .skills-container h2 {
-  font-size: 24px;
+  font-size: 3rem;
   margin-bottom: 20px;
   position: relative;
+  font-family: var(--heading-font);
+  font-weight: var(--bold);
 }
 
 /* Small Blue Underline */
@@ -279,6 +294,7 @@
   font-size: 14px;
   font-weight: bold;
   margin-top: 8px;
+  font-family: var(--para-font);
 }
 
 .skill-box:hover {
@@ -309,6 +325,7 @@
   border-radius: 20px;
   transition: 0.5s;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
 
 .container .card:hover {
@@ -361,10 +378,12 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--clr);
+  font-family: var(--heading-font);
 }
 
 .container .card .content p {
   color: #333;
+  font-family: var(--para-font);
 }
 
 .container .card .content a {
@@ -400,4 +419,149 @@
   .container .card .content a {
     font-size: 0.9rem;
   }
+}
+
+/* Footer Css */
+
+footer {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: whitesmoke;
+  box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* card stack */
+#cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--numcards), var(--card-height));
+  gap: var(--card-margin);
+  padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+  margin-bottom: var(--card-margin);
+  width: 70%;
+}
+
+#card-1 {
+  --index: 1;
+}
+
+#card-2 {
+  --index: 2;
+}
+
+#card-3 {
+  --index: 3;
+}
+
+#card-4 {
+  --index: 4;
+}
+
+.card {
+  position: sticky;
+  top: 0;
+  padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+.card-contentl {
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+  background: #fffaf2;
+  color: #131212;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: 'text img';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: stretch;
+  padding: 1.4em;
+}
+
+.card-contentl > div {
+  grid-area: text;
+  width: 95%;
+  max-width: 800px;
+  place-self: center;
+  text-align: left;
+  display: grid;
+  gap: 1em;
+  place-items: start;
+}
+
+.card-contentl > figure {
+  grid-area: img;
+  overflow: hidden;
+}
+
+.card-contentl > figure > img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.4em;
+}
+
+.card-contentl h1 {
+  font-weight: var(--bold);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: var(--heading-font);
+}
+
+.card-contentl h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0;
+}
+
+.card-contentl p {
+  font-weight: 300;
+  line-height: 1.42;
+  font-size: 1.1rem;
+  font-family: var(--para-font);
+}
+
+/* Animation */
+@supports (animation-timeline: works) {
+  @scroll-timeline cards-element-scrolls-in-body {
+    source: selector(body);
+    scroll-offsets: selector(#cards) start 1, selector(#cards) start 0;
+    start: selector(#cards) start 1;
+    end: selector(#cards) start 0;
+    time-range: 4s;
+  }
+
+  .card {
+    --index0: calc(var(--index) - 1);
+    --reverse-index: calc(var(--numcards) - var(--index0));
+    --reverse-index0: calc(var(--reverse-index) - 1);
+  }
+
+  .card__content {
+    transform-origin: 50% 0%;
+    will-change: transform;
+
+    --duration: calc(var(--reverse-index0) * 1s);
+    --delay: calc(var(--index0) * 1s);
+
+    animation: var(--duration) linear scale var(--delay) forwards;
+    animation-timeline: cards-element-scrolls-in-body;
+  }
+
+  @keyframes scale {
+    to {
+      transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+    }
+  }
+}
+
+.letter-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 400px;
 }

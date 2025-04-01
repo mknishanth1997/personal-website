@@ -87,7 +87,7 @@
   font-size: clamp(30px, 5vw, 55px);
   text-shadow: -2px -2px 0 rgba(255, 255, 255, 0.5),
     2px 2px 0 rgba(0, 0, 0, 0.7);
-  font-family: 'Poppins', sans-seri;
+  font-family: var(--heading-font);
   opacity: 0; /* Start hidden */
   animation: fadeInUp 1.2s ease-out forwards;
 }
@@ -99,7 +99,7 @@
   border-radius: 8px;
   margin-bottom: 24px;
   /* font-family: 'Bungee Shade', sans-serif; */
-  font-family: 'Bebas Neue', 'Bungee Shade';
+  font-family: var(--funny-font);
   font-weight: bold;
   font-style: normal;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
@@ -121,7 +121,7 @@
   color: var(--header-link-animation-color);
   text-shadow: 2px 2px 4px black;
   font-size: clamp(20px, 4vw, 40px);
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--heading-font);
   opacity: 0; /* Start hidden */
   animation: fadeInUp 1.2s ease-out forwards;
 }
@@ -130,7 +130,7 @@
   font-size: 24px;
   padding-bottom: 50px;
   line-height: 2rem;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--para-font);
   opacity: 0; /* Start hidden */
   animation: fadeInUp 1.2s ease-out forwards;
 }
@@ -151,7 +151,7 @@
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   background-color: transparent;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--para-font);
 }
 
 .downloadResumeButton:hover {

@@ -10,7 +10,10 @@
   --grid-color9: #bb7084;
 }
 
-.story-telling-container {
+.story-telling-container > h1 {
+  font-family: var(--heading-font);
+  font-weight: var(--extraBold) ;
+  color: var(--fontColorw);
 }
 
 .story-container > * {
@@ -23,15 +26,21 @@
   margin-bottom: 2rem;
   min-height: 100vh;
 }
-
+/* cell 1 */
 .sty-grid-cell1 {
   background-color: var(--grid-color1);
   /* position: relative; */
   z-index: 5;
-  /* font-family: var(--font1); */
-  font-weight: bolder;
   color: white;
   border-radius: 16px 0px 0px 0px;
+}
+.sty-grid-cell1  h1 {
+  font-family: var(--heading-font);
+  font-weight: var(--bold);
+}
+
+.sty-grid-cell1 li {
+  font-family: var(--para-font);
 }
 .sty-grid-cell1 > img {
   width: 150%;
@@ -46,6 +55,9 @@
   object-fit: contain;
   max-height: 100%;
 }
+
+
+/* cell 2 */
 .sty-grid-cell2 {
   background-color: var(--grid-color2);
 }
@@ -110,8 +122,6 @@
   padding: 0;
   text-align: center;
   font-size: 2rem;
-  font-family: var(--font1);
-  font-weight: bolder;
 }
 
 .sty-grid-cell1 ul {
@@ -131,7 +141,6 @@
   /* border: solid; */
   border-radius: 8px;
   background-color: #b08aad;
-  font-family: var(--font2);
 }
 .sty-grid-cell1 li:hover {
   background-color: aqua;
@@ -181,7 +190,7 @@
 }
 
 .sty-grid-cell2 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--heading-font);
   font-size: clamp(24px, 5vw, 50px);
   font-weight: 700;
   margin-bottom: 15px;
@@ -216,7 +225,7 @@
 }
 
 .sty-grid-cell3 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--heading-font);
   font-size: clamp(22px, 5vw, 45px);
   font-weight: 700;
   margin-bottom: 15px;
@@ -254,7 +263,7 @@
 }
 
 .sty-grid-cell4 li {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--para-font);
   font-size: clamp(18px, 4vw, 24px);
   font-weight: 500;
   padding: 10px 0;
@@ -298,7 +307,7 @@
 
 /* Dialogue Text Style */
 .dialog h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--heading-font);
   font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 500;
   padding: 12px 15px;
@@ -461,7 +470,7 @@
   transition: transform 0.3s ease-in-out;
 }
 .sty-grid-cell7 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--para-font);
   font-size: 1.8rem;
   font-weight: 600;
   color: white;
@@ -577,7 +586,7 @@
 }
 
 .sty-grid-cell8 p {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--para-font);
   font-size: 1.5rem;
   font-weight: 600;
   color: #ffffff;
@@ -649,7 +658,7 @@
 }
 
 .sty-grid-cell9 p {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--para-font);
   font-size: 1.5rem;
   font-weight: 600;
   color: #ffffff;
@@ -696,8 +705,12 @@
   min-height: 400px;
 }
 
+.sty-grid-cell10 p {
+  font-family: var(--para-font);
+}
+
 .sty-grid-cell10 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--heading-font);
   font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;

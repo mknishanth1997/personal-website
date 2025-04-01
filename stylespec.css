@@ -1,0 +1,16 @@
+/* Font Styles */
+
+:root {
+  --heading-font: 'Poppins', sans-serif;
+  --para-font: 'Inter', sans-serif;
+  --funny-font: 'Bebas Neue', 'Bungee Shade';
+  --semiBold: 600;
+  --bold: 700;
+  --extraBold: 800;
+  --fontColorw: white;
+  --fontColorB: black;
+}
+
+body {
+  background-color: white;
+}

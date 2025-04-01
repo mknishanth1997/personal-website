@@ -2,6 +2,11 @@
   --font4: 'Gochi Hand', cursive;
 }
 
+.tut-time > h1 {
+  font-family: (--heading-font);
+  font-weight: var(--extraBold);
+}
+
 .board {
   width: 100%;
   min-height: 100vh;
@@ -18,7 +23,6 @@
 /* Flex box Font setting  */
 
 .flex-exp {
-  font-family: var(--font4);
   font-size: 2rem;
   text-align: center;
   border: solid;
@@ -26,6 +30,15 @@
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+}
+
+.flex-exp > h3 {
+  font-family: var(--heading-font);
+  font-weight: var(--bold);
+}
+
+.flex-parent > div {
+  font-family: var(--para-font);
 }
 
 /* Flex box  */
@@ -128,6 +141,10 @@ select {
   padding: 32px;
 }
 
+.grid-box > div {
+  font-family: var(--para-font);
+}
+
 .grid-box > * {
   font-size: 32px;
   padding: 8px;
@@ -135,7 +152,6 @@ select {
   text-align: center;
   margin: 8px;
   box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.5);
-  font-family: var(--font4);
 }
 .grid-box > div:nth-child(1) {
   background-color: skyblue;
@@ -176,7 +192,7 @@ pre {
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(255, 61, 0, 0.3);
-  font-family: var(--font4);
+  font-family: var(--heading-font);
 }
 /* Hover effect */
 .grid-code-snippet > button:hover {
@@ -240,4 +256,5 @@ pre {
   text-align: center;
   margin-top: 100px;
   padding: 8px;
+  font-family: var(--heading-font);
 }

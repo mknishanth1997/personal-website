@@ -41,7 +41,8 @@ header {
 
 .header-logo {
   font-size: var(--header-logo-font);
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--heading-font);
+  font-weight: var(--bold);
   opacity: 0; /* Start hidden */
   animation: slideInLeft 1s ease-out forwards;
 }
@@ -66,7 +67,8 @@ header {
   gap: 15px;
   cursor: pointer;
   font-size: 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--heading-font);
+  font-weight: var(--semiBold);
   opacity: 0; /* Start hidden */
   animation: slideInRight 1s ease-out forwards;
 }
